@@ -30,7 +30,7 @@ tags: 前端自动化工具
 	taks：执行的任务；
 **注**：1.1 streams（流）的简述：Node.js中的I/O操作是异步的，因此磁盘的读写和网络操作都需要传递回调函数。streams的优点：不需要把文件都一次性写入内存，通过pie（管道）把文件转为数据流（将任务和操作连接起来），像瀑布一样一级级（one by one）往下流（处理），因此只需一次I/O操作。而Grunt是每执行一个任务就需要I/O一次，在任务多的时候，就会有大量I/O操作，效率自然就会比较低。
 1.2. 以前Gulp有5个核心API，但随着Gulp 3.5的更新，gulp.run()方法早已被弃用。
-###四：gulp安装配置？
+### 四：gulp安装配置？
 &emsp;&emsp;gulp的安装很简单，在这我就不一一讲解，只看代码：
 ```
 //全局安装
@@ -304,4 +304,4 @@ gulp browser-sync
 ### 七：总结gulp的配置
 &emsp;&emsp;说了这么多，我们应该清楚，gulp无非和其他node模块一样，先用`require()`引入模块，然后用`gulp.task()`建立任务，然后添加到监听任务`gulp.task('watch',function(){}`中，最后把这些任务名添加到默认任务`gulp.task('default', ['html', 'less','js', 'webserver', 'watch']);`中为了执行方便，直接一个`gulp`就处理了所有代码，不过特别的模块需要特别执行，比如：`browserSync`模块
 
-
+hexo博客地址 ：[flyingpig的博客](http://iambangbang.club)
